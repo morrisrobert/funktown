@@ -3,7 +3,10 @@ const con = require('../../config/dbconfig')
 const daoCommon = {
 
     findAll: (req, res, table)=> {
-
+        /*trying to get my req to work and table is already defined.*/
+        /*const table = req.params.table*/
+        
+        
         con.execute(
             `SELECT * from ${table};`,
             (error, rows)=> {

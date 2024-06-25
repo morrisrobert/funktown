@@ -67,7 +67,7 @@ CREATE TABLE album (
     label_id TINYINT UNSIGNED NOT NULL,
     yr_released YEAR NOT NULL,
     price VARCHAR(10),
-    imgUrl VARCHAR(40),
+    imgUrl VARCHAR(100),
     date_created TIMESTAMP DEFAULT CURRENT_TIMESTAMP,
     date_updated TIMESTAMP DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP,
     CONSTRAINT pk_album PRIMARY KEY (album_id),
@@ -77,3 +77,6 @@ CREATE TABLE album (
 ); 
 
 
+
+
+UPDATE album SET imgUrl = NOT NULL;

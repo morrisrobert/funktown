@@ -3,9 +3,9 @@ const mysql = require('mysql2')
 const pool = mysql.createConnection({
     connectionLimit: 10,
     host: 'localhost',
-    user: 'rmorris',
+    user: 'root',
     password: 'Nevalost1!',
     database: 'funkmothership'
 })
 
-module.export = pool
+module.exports = pool

@@ -5,8 +5,8 @@ const server = express()
 const cors = require('cors')//ask about why cors
 const helmet = require('helmet')
 const router = require('./app/routes/router')//check my folder layout to make sure its working properly
-const port = process.env.port || 3000 // this is my port
-
+const port = process.env.port || 3005 // this is my port
+/*const axios = require('axios')*/
 
 //again helmet handles images and scripts. 
 server.use(helmet.contentSecurityPolicy({
