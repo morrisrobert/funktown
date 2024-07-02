@@ -1,7 +1,7 @@
 import { useState, useEffect } from 'react'
 import { Routes, Route } from 'react-router-dom'
 import axios from 'axios'
-//axios.post("http://localhost:3000/register", data)
+//axios.post("http://localhost:3000/register", data)...axios wasnt working so i tried this. Still didnt smh.
 
 import Header from "./components/Header"
 import Footer from "./components/Footer"
@@ -10,17 +10,19 @@ import About from "./components/About"
 import Store from "./components/Store"
 import AlbumSingle from "./components/AlbumSingle"
 import Genre from "./components/Genre"
+import GenreSingle from './components/GenreSingle'
 import ErrorPage from "./components/ErrorPage"
 import CreateAccount from './components/CreateAccount'
+import Login from './components/Login'
 
 
-/*Im Reall trying to understand whats going on here lol. I understand some but def not all of it. This is the first time Ive done an App like this to my knowledge. If not i dont remember when. The kind im used to is at the bottom.
+/*I am Reall trying to understand whats going on here lol. I understand some but def not all of it. This is the first time Ive done an App like this to my knowledge. If not i dont remember when. The kind im used to is at the bottom.
 
 sourced by Satchwerk and KChat*/
 const App =()=> {
 /*Albumsingle was changed from album....i dont think this is correct*/
-    const [ album, setAlbum ] = useState([])
-    const [ poster, setPoster ] = useState([])
+    const [ albums, setAlbums ] = useState([])
+    const [ posters, setPosters ] = useState([])
     const [ users, setUsers ] = useState([])
     const [ formData, setFormData ] = useState({
         firstName: '',
@@ -31,19 +33,19 @@ const App =()=> {
     })
 
     useEffect(()=> {
-        const url = 'http://localhost:3000/api/album'
+        const url = 'http://localhost:3005/api/album'
 
-        axios.get(url).then(res => setAlbum(res.data))
+        axios.get(url).then(res => setAlbums(res.data))
     }, [])
 
     useEffect(()=> {
-        const url = 'http://localhost:3000/api/poster'
+        const url = 'http://localhost:3005/api/poster'
 
-        axios.get(url).then(res => setPoster(res.data))
+        axios.get(url).then(res => setPosters(res.data))
     }, [])
 
     useEffect(()=> {
-        const url = 'http://localhost:3000/Users'
+        const url = 'http://localhost:3005/users'
 
         axios.get(url).then(res => setUsers(res.data))
     }, [])
@@ -69,7 +71,7 @@ const App =()=> {
         } else {
             axios({
                 method: 'post',
-                url: 'http://localhost:3000/api/user/create',
+                url: 'http://localhost:3005/api/user/create',
                 data: formData
             })
         }
@@ -82,22 +84,30 @@ const App =()=> {
                 <div className='row'>
                     <div className='col-10'>
                         <Routes>
-                            <Route path='/' element={ <Home />} 
+                            <Route path="/" element={ <Home />} 
                             />
                             <Route path="/about" element={ <About />} 
                             />
-                            <Route path="/poster" element={ <Store products={ poster } heading={ 'poster'}  />} 
+                            <Route path="/poster" element={ <Store products={ posters } heading={ 'poster'}  />} 
                             />
-                            <Route path="/album" element={ <Store products={ album } heading={ 'vinyl' } />} 
-                            />
-                            <Route path="/vinyl/:id" element={ <AlbumSingle />} 
+                            <Route 
+                                path="/albums" 
+                                element={ <Store products={ albums } heading={ 'vinyl' } />} 
                             />
                             <Route
-                                path='/creatAccount'
+                                path='/createaccount'
                                 element={ <CreateAccount
                                             formData={formData}
                                             handleChange={handleChange}
                                             handleSubmit={handleSubmit}
+                                />}
+                            />
+                            <Route path='/genre/:id' element={ <GenreSingle />} />
+                            <Route 
+                                path='/login' 
+                                element={ <Login users={users}
+                                            formData={handleChange}
+                                            handleChange={handleSubmit} 
                                 />}
                             />
                             <Route path="*" element={ <ErrorPage /> } 

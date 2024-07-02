@@ -3,19 +3,21 @@ const Card =(props)=> {
 
     return (
         <div className="col">
-            <div className="card" style="width: 18rem;" >
-                <img src={`/images/${props.imgUrl}`} alt={props.productName} className="img-fluid image card-img-top"/>
+            <div className="card" style={{width: "18rem;" }}>
+                <img src={`/images/${props.imgUrl}`} alt={props.name} className="img-fluid image card-img-top"/>
                 <div className="card-body">
-                    <h3 className="cart-title product-name text-capitalize">
+                    <h3 className="card-title product-name text-capitalize">
                         <Link to={`/${props.endpoint}/${props.id}`}>
-                        {props.productName}
+                        {props.name}
                         </Link>
                     </h3>
-                    <p className="card-text text-capitalize card-detail">{props.detail}</p>
-                    <p className="cart-text">Price ${props.price}</p>
+                    <p className="card-text" id="cardIm">{props.alias}</p>
+                    <p className="card-text" id="price">Price {props.price}</p>
+
+
                 </div>
                 <footer className="card-footer">
-                <button className="btn btn-primary cart-btns text-capitalize d-block mx-auto">add to the ship</button>
+                <button className="btn btn-primary cart-btns text-capitalize d-block mx-auto" id="log">Add your items to the ships log</button>
                 </footer>
             </div>
         </div>

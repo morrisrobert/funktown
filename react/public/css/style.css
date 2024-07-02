@@ -1,0 +1,223 @@
+:root{
+    --font: "Permanent Marker";
+}
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-family: sans-serif;
+}
+
+body {
+    /*border: 5px solid black;*/
+    /*background-image: linear-gradient(rgb(177, 236, 238), rgb(155, 89, 154));*/
+    /*background-image: url("../images/background1.jpg");*/
+    background-image: url(../images/background2.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+/*.main {
+    border: 4px solid red;
+    
+}*/
+
+#gif1 {
+   /* border: 4px solid red;*/
+    border-radius: 80px;
+    /*border-color: rgb(240, 80, 52);*/
+    text-align: center;
+}
+
+#open {
+    /*border: 4px solid yellow;*/
+    text-transform: capitalize;
+    font-weight: bolder;
+    font-style: italic;
+    color: rgba(5, 2, 2, 0.918);
+    font-size: 25px;
+    font-family: var(--font);
+}
+
+#frame1 {
+    /*border: 4px solid black;*/
+    border-radius: 20px;
+}
+
+#header {
+    /*border: 4px solid red;*/
+    text-transform: uppercase;
+    font-weight: bolder;
+    align-items: center;
+    padding: 10px;
+    margin: 10px;
+}
+
+#record1 {
+    font-weight: bolder;
+    /*font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    /*border: 4px solid blue;*/
+    color: black;
+    font-size: 70px;
+    font-family: var(--font);
+}
+
+.me-2 {
+    /*border: 4px solid red;*/
+    /*padding-inline: 30px;*/
+    font-size: 25px;
+    padding: 20px;
+}
+
+#about {
+   /* border: 4px solid black;*/
+    font-family: var(--font);
+    color: rgba(0, 0, 0, 0.916);
+}
+
+#poster {
+   /* border: 4px solid black;*/
+    font-family: var(--font);
+    color: rgba(0, 0, 0, 0.918);
+}
+
+#view {
+   /* border: 4px solid black;*/
+    font-family: var(--font);
+    color: rgba(0, 0, 0, 0.916);
+}
+
+#sign {
+   /* border: 4px solid black;*/
+    font-family: var(--font);
+    font-size: 30px;
+    color: rgba(255, 0, 0, 0.916);
+}
+
+#welcome {
+    /*border: 4px solid black;*/
+    font-family: var(--font);
+    font-size: 28px;
+    color: rgba(255, 0, 0, 0.916);
+    text-decoration: none;
+    /*margin-right: 150px;*/
+}
+
+#cart {
+    /*border: 4px solid black;*/
+    color: rgb(255, 0, 0);
+    font-size: 15px;
+    font-family: var(--font);
+    font-weight: bolder;
+    text-align: end;
+}
+
+#all {
+    /*border: 4px solid black;*/
+    text-align: center;
+    text-transform: uppercase;
+    font-weight: bolder;
+    font-family: var(--font);
+    color: rgba(0, 0, 0, 0.916);
+    font-size: 50px;
+    margin-bottom: 50px;
+}
+
+#card12 {
+    font-family: var(--font);
+    font-size: 30px;
+}
+
+#boogie {
+    font-family: var(--font);
+    font-size: 30px;
+    text-transform: none;
+}
+
+#aka {
+    font-weight: bolder;
+}
+
+#out {
+    font-family: var(--font);
+    font-size: 50px;
+}
+
+.h1 {
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    font-size: 80px;
+    color: rgb(0, 0, 0);
+    text-transform: uppercase;
+    margin-bottom: 440px;
+    margin-right: 90px;
+}
+
+.h2 {
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    font-size: 60px;
+    color: rgb(255, 255, 255);
+    text-transform: uppercase;
+    margin-bottom: 420px;
+    margin-right: 180px;
+}
+
+.h3 {
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    font-size: 80px;
+    color: rgb(253, 251, 251);
+    text-transform: uppercase;
+    margin-bottom: 520px;
+    margin-left: 190px;
+}
+
+#log {
+    font-family: var(--font);
+}
+
+#price {
+    font-family: var(--font);
+    font-size: 25px;
+}
+
+#site {
+    font-family: var(--font);
+    color: black;
+}
+
+#bobbymo {
+    font-family: var(--font);
+    text-decoration: none;
+}
+
+#create1 {
+    font-family: var(--font);
+    color: rgb(255, 0, 0);
+}
+
+#form {
+    font-family: var(--font);
+}
+
+.card {
+    border: 8px solid rgba(0, 0, 0, 0.918);
+    border-radius: 16px;
+}
+
+#cardIm {
+    /*border: 4px solid red;*/
+    font-family: var(--font);
+    font-size: 20px;
+    text-transform: uppercase;
+}
+
+#error1 {
+    border: 4px solid red;
+    margin-left: 400px;
+}
+
+#error2 {
+    font-size: 40px;
+    font-family: var(--font);
+    color: black;
+}

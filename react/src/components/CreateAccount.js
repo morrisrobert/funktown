@@ -3,9 +3,9 @@ const CreateAccount =({ formData, handleChange, handleSubmit })=> {
     return (
         <main className="main" id="createAcctMain">
             <div className="container">
-                <h2 className="text-capitalize text-danger">Create an account</h2>
+                <h2 className="text-capitalize text-danger" id="create1">Create an account</h2>
                 <form className="create-account" onSubmit={handleSubmit}>
-                    <div className="form-floating mb-3">
+                    <div className="form-floating mb-3" id="form">
                         <input
                             type="text"
                             className="form-control"
@@ -17,7 +17,7 @@ const CreateAccount =({ formData, handleChange, handleSubmit })=> {
                         />
                         <label htmlFor="firstName">First</label>
                     </div>
-                    <div className="form-floating mb-3">
+                    <div className="form-floating mb-3" id="form">
                         <input
                             type="text"
                             className="form-control"
@@ -29,7 +29,7 @@ const CreateAccount =({ formData, handleChange, handleSubmit })=> {
                         />
                         <label htmlFor="lastName">last</label>
                     </div>
-                    <div className="form-floating mb-3">
+                    <div className="form-floating mb-3" id="form">
                         <input
                             type="text"
                             className="form-control"

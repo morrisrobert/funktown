@@ -76,7 +76,22 @@ CREATE TABLE album (
     CONSTRAINT fk_label FOREIGN KEY (label_id) REFERENCES label (label_id)
 ); 
 
+CREATE TABLE album_to_genre (
+    album_id INT UNSIGNED NOT NULL,
+    genre_id TINYINT UNSIGNED NOT NULL,
+    CONSTRAINT fk_album FOREIGN KEY (album_id) REFERENCES album (album_id),
+    CONSTRAINT fk_genre FOREIGN KEY (genre_id) REFERENCES genre (genre_id)
+);
+
+
+
+
 
 
 
 UPDATE album SET imgUrl = NOT NULL;
+
+/*resetting auto increment */
+SET @num := 0;
+UPDATE my_table SET id = @num := (@num + 1);
+ALTER TABLE my_table AUTO_INCREMENT = 1;

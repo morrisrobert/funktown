@@ -6,7 +6,7 @@ const albumDao = {
 
     findAlbums: (req, res, table)=> {
         con.execute(
-            `SELECT al.album_id, al.title, al.artist_id, al.genre_id, al.label_id, al.yr_released, al.price, al.imgUrl
+            `SELECT al.album_id, al.title, al.artist_id, al.genre_id, al.label_id, al.yr_released, al.price, al.imgUrl, ar.alias, l.label
             FROM album al
             JOIN artist ar USING (artist_id)
             JOIN label l USING (label_id)
@@ -55,7 +55,7 @@ const albumDao = {
                 `SELECT * FROM ${table} ORDER BY title;`,
                 (error, rows)=> {
                     if (!error) {
-                        if (rows.lenth === 1) {
+                        if (rows.length === 1) {
                             res.json(...rows)
                         } else {
                             res.json(rows)

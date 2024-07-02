@@ -8,7 +8,7 @@ const Genre =()=> {
 
     useEffect(()=> {
 
-        const url = 'http://localhost:3000/api/genre/sort'
+        const url = 'http://localhost:3005/api/genre/sort'
         axios.get(url).then(res => setGenres(res.data))
     }, [])
 
@@ -20,13 +20,15 @@ const Genre =()=> {
         </li>
     })
 
-    return (
+    /*I took out the initial return because i couldnt figure out the reason why i couldnt get my genreSingele working...but hopefully i can figure it out with help..*/
+
+   /*return (
         <aside className="aside genre-aide overflow-y-scroll" id="genreAside">
-            <ul className="list-group list-group-flush genre-list">
+            <ul className="list-group list-group-flush genre-list">The Ships Genres Baba
                 {genreItems}
             </ul>
         </aside>
-    )
+    )*/
 }
 
 export default Genre

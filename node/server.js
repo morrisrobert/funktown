@@ -20,11 +20,12 @@ server.use(helmet.contentSecurityPolicy({
 }))
 
 server.use(cors())
-server.use(express.json())
-server.use(express.urlencoded({extended: true}))
+    server.use(express.json())
+    server.use(express.urlencoded({extended: true}))
 
 //localhost:3000
 server.use('/', router)
+//server.set('view engine', 'ejs')
 
 
 

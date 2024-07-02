@@ -2,15 +2,16 @@ import { useState, useEffect } from "react"
 import { useParams } from "react-router-dom"
 import axios from "axios"
 
+
 const AlbumSingle =()=> {
 
     const [ album, setAlbum ] = useState({})
     const params = useParams()
 
-    const url = `http://localhost:3000/api/album/${params.id}`
+    const url = `http://localhost:3005/api/album/${params.id}`
 
     useEffect(()=> {
-        axios.get(url).then(res => setAlbum(res.data))
+        axios.get('url').then(res => setAlbum(res.data))
     },[])
 
    // console.log(album)

@@ -9,40 +9,46 @@ const Header =()=> {
                 <div className="row">
                     <div className="col-md-5">
                         <h1 className="branding text-capitalize text-center text-md-start">
-                            <Link to="/" style={{ textDecoration: 'none'}}>                            
-                            </Link>
+                            <Link to="/" style={{ textDecoration: 'none'}} id="record1">                            
+                            (F.M.R) Funky Mothership Records</Link>
                         </h1>
                     </div>
                     <div className="col-md-4">
                         <nav className="top-nav">
-                            <ul className="nave justify-content-center justify-content-md-end">
+                            <ul className="nav justify-content-center justify-content-md-end">
                                 <li className="nav-item me-2">
                                     <Link
                                         to="/about"
-                                        style={{textDecoration: 'none', textTransform: 'capitalize'}}
+                                        style={{textDecoration: 'none', textTransform: 'capitalize'}} id="about"
                                     >About</Link>
                                 </li>
                                 <li className="nav-item me-2">
                                     <Link
                                         to="/Poster"
-                                        style={{textDecoration: 'none', textTransform: 'capitalize'}}
-                                    >Poster</Link>
+                                        style={{textDecoration: 'none', textTransform: 'capitalize'}} id="poster"
+                                    >Posters</Link>
                                 </li>
                                 <li className="nav-item me-2">
                                     <Link
-                                        to='/album'
-                                        style={{textDecoration: 'none', textTransform: 'capitalize'}}>
-                                            View the Motherships music</Link>
+                                        to='/albums'
+                                        style={{textDecoration: 'none', textTransform: 'capitalize'}} id="view">
+                                            View the Motherships music  </Link>
                                 </li>
-                               <li className="nav-item me-2">
-                                    <BsCart />
+                                <li className="nav-item me-2" id="cart">
+                                    <BsCart /> Shopping Cart
                                 </li>
                             </ul>
                         </nav>
                     </div>
                     <div className="col-md-3">
-                        <p className="text-end signin">Sign in to board the ship</p>
-                        <Link to='/createAccount'>The ship welcomes you</Link>
+                        <Link
+                            to='/login'
+                            style={{textDecoration: 'none', marginRight: '20px', textTransform: 'capitalize'}} id="sign">
+                                sign in
+                            </Link>
+                    </div>
+                    <div className="col-md-3">
+                        <Link to='/createAccount' id="welcome">Start your voyage into the Beyond!</Link>
                     </div>
                 </div>
             </div>
